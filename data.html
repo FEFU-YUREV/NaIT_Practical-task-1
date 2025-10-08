@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Новая страница</title>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 				>
 			</p>
 		</div>
-		<hr />
+		<hr>
 		<div class="filters">
 			<details>
 				<summary>График</summary>
@@ -22,13 +22,13 @@
 				<form>
 					<label> <input type="radio" name="quest_1" value="1_1">Производитель </label><br>
    				<label> <input type="radio" name="quest_1" value="1_2">Год </label><br>
-   				<label> <input type="radio" name="quest_1" value="1_3">Модель </label></li>
+   				<label> <input type="radio" name="quest_1" value="1_3">Модель </label>
 				</form>
 				<p><b>Значение по оси OY:</b></p>
 				<form>
 					<label> <input type="checkbox" name="quest_2" value="2_1">Максимальная цена </label><br>
    				<label> <input type="checkbox" name="quest_2" value="2_2">Минимальная цена </label><br>
-   				<label> <input type="checkbox" name="quest_2" value="2_3">Балл производительности </label></li>
+   				<label> <input type="checkbox" name="quest_2" value="2_3">Балл производительности </label>
 				</form>
 				<p><input type="button" value="Построить"></p>
 				<p>Здесь будет график</p>
@@ -39,27 +39,27 @@
 					<p>Бренд: <input type="text" name="brand" id="brand"></p>
 					<p>Модель: <input type="text" name="model" id="model"></p>
 					<p>CPU модель: <input type="text" name="CPU" id="CPU"></p>
-					<p>Ядра: от <input type="text" name="kernel" id="kernel"> до <input type="text" name="kernel" id="kernel"></p>
-					<p>Потоки: от <input type="text" name="threads" id="threads"> до <input type="text" name="threads" id="threads"></p>
-					<p>Буст (ГГц): от <input type="text" name="boost" id="boost"> до <input type="text" name="boost" id="boost"></p>
-					<p>RAM (ГБ): от <input type="text" name="RAM" id="RAM"> до <input type="text" name="RAM" id="RAM"></p>
-					<p>Хранилище (ГБ): от <input type="text" name="storage" id="storage"> до <input type="text" name="storage" id="storage"></p>
+					<p>Ядра: от <input type="text" name="kernel" id="kernel_min"> до <input type="text" name="kernel" id="kernel_max"></p>
+					<p>Потоки: от <input type="text" name="threads" id="threads_min"> до <input type="text" name="threads" id="threads_max"></p>
+					<p>Буст (ГГц): от <input type="text" name="boost" id="boost_min"> до <input type="text" name="boost" id="boost_max"></p>
+					<p>RAM (ГБ): от <input type="text" name="RAM" id="RAM_min"> до <input type="text" name="RAM" id="RAM_max"></p>
+					<p>Хранилище (ГБ): от <input type="text" name="storage" id="storage_min"> до <input type="text" name="storage" id="storage_max"></p>
 					<p>GPU: <input type="text" name="GPU" id="GPU"></p>
 					<p>Экран (дюймы/разрешение/Гц): <input type="text" name="screen" id="screen"></p>
-					<p>Вес (кг): от <input type="text" name="weight" id="weight"> до <input type="text" name="weight" id="weight"></p>
-					<p>Батарея (Вт⋅ч): от <input type="text" name="battery" id="battery"> до <input type="text" name="battery" id="battery"></p>
-					<p>Цена: от <input type="text" name="price" id="price"> до <input type="text" name="price" id="price"></p>
-					<p>Балл производительности: от <input type="text" name="performance" id="performance"> до <input type="text" name="performance" id="performance"></p>
-					<p>Год: от <input type="text" name="year" id="year"> до <input type="text" name="year" id="year"></p>
+					<p>Вес (кг): от <input type="text" name="weight" id="weight_min"> до <input type="text" name="weight" id="weight_max"></p>
+					<p>Батарея (Вт⋅ч): от <input type="text" name="battery" id="battery_min"> до <input type="text" name="battery" id="battery_max"></p>
+					<p>Цена: от <input type="text" name="price" id="price_min"> до <input type="text" name="price" id="price_max"></p>
+					<p>Балл производительности: от <input type="text" name="performance_min" id="performance"> до <input type="text" name="performance" id="performance_max"></p>
+					<p>Год: от <input type="text" name="year" id="year_min"> до <input type="text" name="year" id="year_max"></p>
 				</form>
 				<p><input type="button" value="Найти"></p>
 			</details>
 			<details>
 				<summary>Сортировка</summary>
 				<p>
-				<label for="task">
+				<label for="task_1">
           Первый уровень:
-          <select id="task">
+          <select id="task_1">
             <option value="0">Бренд</option>
             <option value="1">Модель</option>
             <option value="2">CPU модель</option>
@@ -82,9 +82,9 @@
 					<input type="checkbox" name="quest_2" value="2_1"></label>
 				</p>
 				<p>
-				<label for="task">
+				<label for="task_2">
           Второй уровень:
-          <select id="task">
+          <select id="task_2">
             <option value="0">Бренд</option>
             <option value="1">Модель</option>
             <option value="2">CPU модель</option>
@@ -107,9 +107,9 @@
 					<input type="checkbox" name="quest_2" value="2_1"></label>
 				</p>
 				<p>
-				<label for="task">
+				<label for="task_3">
           Третий уровень:
-          <select id="task">
+          <select id="task_3">
             <option value="0">Бренд</option>
             <option value="1">Модель</option>
             <option value="2">CPU модель</option>
