@@ -36,21 +36,21 @@
 			<details>
 				<summary>Фильтр</summary>
 				<form>
-					<p>Бренд: <input type="text" name="username" id="username"></p>
-					<p>Модель: <input type="text" name="username" id="username"></p>
-					<p>CPU модель: <input type="text" name="username" id="username"></p>
-					<p>Ядра: от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Потоки: от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Буст (ГГц): от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>RAM (ГБ): от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Хранилище (ГБ): от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>GPU: <input type="text" name="username" id="username"></p>
-					<p>Экран (дюймы/разрешение/Гц): <input type="text" name="username" id="username"></p>
-					<p>Вес (кг): от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Батарея (Вт⋅ч): от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Цена: от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Балл производительности: от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
-					<p>Год: от <input type="text" name="username" id="username"> до <input type="text" name="username" id="username"></p>
+					<p>Бренд: <input type="text" name="brand" id="brand"></p>
+					<p>Модель: <input type="text" name="model" id="model"></p>
+					<p>CPU модель: <input type="text" name="CPU" id="CPU"></p>
+					<p>Ядра: от <input type="text" name="kernel" id="kernel"> до <input type="text" name="kernel" id="kernel"></p>
+					<p>Потоки: от <input type="text" name="threads" id="threads"> до <input type="text" name="threads" id="threads"></p>
+					<p>Буст (ГГц): от <input type="text" name="boost" id="boost"> до <input type="text" name="boost" id="boost"></p>
+					<p>RAM (ГБ): от <input type="text" name="RAM" id="RAM"> до <input type="text" name="RAM" id="RAM"></p>
+					<p>Хранилище (ГБ): от <input type="text" name="storage" id="storage"> до <input type="text" name="storage" id="storage"></p>
+					<p>GPU: <input type="text" name="GPU" id="GPU"></p>
+					<p>Экран (дюймы/разрешение/Гц): <input type="text" name="screen" id="screen"></p>
+					<p>Вес (кг): от <input type="text" name="weight" id="weight"> до <input type="text" name="weight" id="weight"></p>
+					<p>Батарея (Вт⋅ч): от <input type="text" name="battery" id="battery"> до <input type="text" name="battery" id="battery"></p>
+					<p>Цена: от <input type="text" name="price" id="price"> до <input type="text" name="price" id="price"></p>
+					<p>Балл производительности: от <input type="text" name="performance" id="performance"> до <input type="text" name="performance" id="performance"></p>
+					<p>Год: от <input type="text" name="year" id="year"> до <input type="text" name="year" id="year"></p>
 				</form>
 				<p><input type="button" value="Найти"></p>
 			</details>
@@ -60,9 +60,21 @@
 				<label for="task">
           Первый уровень:
           <select id="task">
-            <option value="0">Число простое?</option>
-            <option value="1">Число является полным квадратом?</option>
-            <option value="2">Число совершенное?</option>
+            <option value="0">Бренд</option>
+            <option value="1">Модель</option>
+            <option value="2">CPU модель</option>
+						<option value="3">Ядра</option>
+						<option value="4">Потоки</option>
+						<option value="5">Буст (ГГц)</option>
+						<option value="6">RAM (ГБ)</option>
+						<option value="7">Хранилище (ГБ)</option>
+						<option value="8">GPU</option>
+						<option value="9">Экран (дюймы/разрешение/Гц)</option>
+						<option value="10">Вес (кг)</option>
+						<option value="11">Батарея (Вт⋅ч)</option>
+						<option value="12">Цена</option>
+						<option value="13">Балл производительности</option>
+						<option value="14">Год</option>
           </select>
         </label>
 				<label> 
@@ -73,9 +85,21 @@
 				<label for="task">
           Второй уровень:
           <select id="task">
-            <option value="0">Число простое?</option>
-            <option value="1">Число является полным квадратом?</option>
-            <option value="2">Число совершенное?</option>
+            <option value="0">Бренд</option>
+            <option value="1">Модель</option>
+            <option value="2">CPU модель</option>
+						<option value="3">Ядра</option>
+						<option value="4">Потоки</option>
+						<option value="5">Буст (ГГц)</option>
+						<option value="6">RAM (ГБ)</option>
+						<option value="7">Хранилище (ГБ)</option>
+						<option value="8">GPU</option>
+						<option value="9">Экран (дюймы/разрешение/Гц)</option>
+						<option value="10">Вес (кг)</option>
+						<option value="11">Батарея (Вт⋅ч)</option>
+						<option value="12">Цена</option>
+						<option value="13">Балл производительности</option>
+						<option value="14">Год</option>
           </select>
         </label>
 				<label> 
@@ -86,9 +110,21 @@
 				<label for="task">
           Третий уровень:
           <select id="task">
-            <option value="0">Число простое?</option>
-            <option value="1">Число является полным квадратом?</option>
-            <option value="2">Число совершенное?</option>
+            <option value="0">Бренд</option>
+            <option value="1">Модель</option>
+            <option value="2">CPU модель</option>
+						<option value="3">Ядра</option>
+						<option value="4">Потоки</option>
+						<option value="5">Буст (ГГц)</option>
+						<option value="6">RAM (ГБ)</option>
+						<option value="7">Хранилище (ГБ)</option>
+						<option value="8">GPU</option>
+						<option value="9">Экран (дюймы/разрешение/Гц)</option>
+						<option value="10">Вес (кг)</option>
+						<option value="11">Батарея (Вт⋅ч)</option>
+						<option value="12">Цена</option>
+						<option value="13">Балл производительности</option>
+						<option value="14">Год</option>
           </select>
         </label>
 				<label> 
@@ -107,7 +143,7 @@
 						<th scope="col">CPU модель</th>
 						<th scope="col">Ядра</th>
 						<th scope="col">Потоки</th>
-						<th scope="col">Буст ГГц</th>
+						<th scope="col">Буст (ГГц)</th>
 						<th scope="col">RAM (ГБ)</th>
 						<th scope="col">Хранилище (ГБ)</th>
 						<th scope="col">GPU</th>
