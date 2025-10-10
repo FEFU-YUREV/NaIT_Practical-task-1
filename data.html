@@ -20,24 +20,24 @@
 				<summary>График</summary>
 				<p><b>Значение по оси OX:</b></p>
 				<form>
-					<label> <input type="radio" name="quest_1" value="1_1">Производитель </label><br>
-   				<label> <input type="radio" name="quest_1" value="1_2">Год </label><br>
-   				<label> <input type="radio" name="quest_1" value="1_3">Модель </label>
+					<label> <input type="radio" id="manufacturer" name="quest_1" value="1_1">Производитель </label><br>
+   				<label> <input type="radio" id="year" name="quest_1" value="1_2">Год </label><br>
+   				<label> <input type="radio" id="model" name="quest_1" value="1_3">Модель </label>
 				</form>
 				<p><b>Значение по оси OY:</b></p>
 				<form>
-					<label> <input type="checkbox" name="quest_2" value="2_1">Максимальная цена </label><br>
-   				<label> <input type="checkbox" name="quest_2" value="2_2">Минимальная цена </label><br>
-   				<label> <input type="checkbox" name="quest_2" value="2_3">Балл производительности </label>
+					<label> <input type="checkbox" id="max_price" name="quest_2" value="2_1">Максимальная цена </label><br>
+   				<label> <input type="checkbox" id="min_price" name="quest_2" value="2_2">Минимальная цена </label><br>
+   				<label> <input type="checkbox" id="performance_average" name="quest_2" value="2_3">Средний балл производительности </label>
 				</form>
-				<p><input type="button" value="Построить"></p>
+				<p><input type="button" id="build" value="Построить"></p>
 				<p>Здесь будет график</p>
 			</details>
 			<details>
 				<summary>Фильтр</summary>
 				<form>
 					<p>Бренд: <input type="text" name="brand" id="brand"></p>
-					<p>Модель: <input type="text" name="model" id="model"></p>
+					<p>Модель: <input type="text" name="model_input" id="model_input"></p>
 					<p>CPU модель: <input type="text" name="CPU" id="CPU"></p>
 					<p>Ядра: от <input type="text" name="kernel" id="kernel_min"> до <input type="text" name="kernel" id="kernel_max"></p>
 					<p>Потоки: от <input type="text" name="threads" id="threads_min"> до <input type="text" name="threads" id="threads_max"></p>
@@ -52,7 +52,7 @@
 					<p>Балл производительности: от <input type="text" name="performance_min" id="performance"> до <input type="text" name="performance" id="performance_max"></p>
 					<p>Год: от <input type="text" name="year" id="year_min"> до <input type="text" name="year" id="year_max"></p>
 				</form>
-				<p><input type="button" value="Найти"></p>
+				<p><input type="button" id="find" value="Найти"></p>
 			</details>
 			<details>
 				<summary>Сортировка</summary>
@@ -60,78 +60,81 @@
 				<label for="task_1">
           Первый уровень:
           <select id="task_1">
-            <option value="0">Бренд</option>
-            <option value="1">Модель</option>
-            <option value="2">CPU модель</option>
-						<option value="3">Ядра</option>
-						<option value="4">Потоки</option>
-						<option value="5">Буст (ГГц)</option>
-						<option value="6">RAM (ГБ)</option>
-						<option value="7">Хранилище (ГБ)</option>
-						<option value="8">GPU</option>
-						<option value="9">Экран (дюймы/разрешение/Гц)</option>
-						<option value="10">Вес (кг)</option>
-						<option value="11">Батарея (Вт⋅ч)</option>
-						<option value="12">Цена</option>
-						<option value="13">Балл производительности</option>
-						<option value="14">Год</option>
+            <option value="0">Нет</option>
+            <option value="1">Бренд</option>
+            <option value="2">Модель</option>
+            <option value="3">CPU модель</option>
+						<option value="4">Ядра</option>
+						<option value="5">Потоки</option>
+						<option value="6">Буст (ГГц)</option>
+						<option value="7">RAM (ГБ)</option>
+						<option value="8">Хранилище (ГБ)</option>
+						<option value="9">GPU</option>
+						<option value="10">Экран (дюймы/разрешение/Гц)</option>
+						<option value="11">Вес (кг)</option>
+						<option value="12">Батарея (Вт⋅ч)</option>
+						<option value="13">Цена</option>
+						<option value="14">Балл производительности</option>
+						<option value="15">Год</option>
           </select>
         </label>
 				<label> 
 					По убыванию?
-					<input type="checkbox" name="quest_2" value="2_1"></label>
+					<input type="checkbox" id="yes_or_no_1" name="quest_2" value="2_1"></label>
 				</p>
 				<p>
 				<label for="task_2">
           Второй уровень:
           <select id="task_2">
-            <option value="0">Бренд</option>
-            <option value="1">Модель</option>
-            <option value="2">CPU модель</option>
-						<option value="3">Ядра</option>
-						<option value="4">Потоки</option>
-						<option value="5">Буст (ГГц)</option>
-						<option value="6">RAM (ГБ)</option>
-						<option value="7">Хранилище (ГБ)</option>
-						<option value="8">GPU</option>
-						<option value="9">Экран (дюймы/разрешение/Гц)</option>
-						<option value="10">Вес (кг)</option>
-						<option value="11">Батарея (Вт⋅ч)</option>
-						<option value="12">Цена</option>
-						<option value="13">Балл производительности</option>
-						<option value="14">Год</option>
+            <option value="0">Нет</option>
+            <option value="1">Бренд</option>
+            <option value="2">Модель</option>
+            <option value="3">CPU модель</option>
+						<option value="4">Ядра</option>
+						<option value="5">Потоки</option>
+						<option value="6">Буст (ГГц)</option>
+						<option value="7">RAM (ГБ)</option>
+						<option value="8">Хранилище (ГБ)</option>
+						<option value="9">GPU</option>
+						<option value="10">Экран (дюймы/разрешение/Гц)</option>
+						<option value="11">Вес (кг)</option>
+						<option value="12">Батарея (Вт⋅ч)</option>
+						<option value="13">Цена</option>
+						<option value="14">Балл производительности</option>
+						<option value="15">Год</option>
           </select>
         </label>
 				<label> 
 					По убыванию?
-					<input type="checkbox" name="quest_2" value="2_1"></label>
+					<input type="checkbox" id="yes_or_no_2" name="quest_2" value="2_1"></label>
 				</p>
 				<p>
 				<label for="task_3">
           Третий уровень:
           <select id="task_3">
-            <option value="0">Бренд</option>
-            <option value="1">Модель</option>
-            <option value="2">CPU модель</option>
-						<option value="3">Ядра</option>
-						<option value="4">Потоки</option>
-						<option value="5">Буст (ГГц)</option>
-						<option value="6">RAM (ГБ)</option>
-						<option value="7">Хранилище (ГБ)</option>
-						<option value="8">GPU</option>
-						<option value="9">Экран (дюймы/разрешение/Гц)</option>
-						<option value="10">Вес (кг)</option>
-						<option value="11">Батарея (Вт⋅ч)</option>
-						<option value="12">Цена</option>
-						<option value="13">Балл производительности</option>
-						<option value="14">Год</option>
+						<option value="0">Нет</option>
+            <option value="1">Бренд</option>
+            <option value="2">Модель</option>
+            <option value="3">CPU модель</option>
+						<option value="4">Ядра</option>
+						<option value="5">Потоки</option>
+						<option value="6">Буст (ГГц)</option>
+						<option value="7">RAM (ГБ)</option>
+						<option value="8">Хранилище (ГБ)</option>
+						<option value="9">GPU</option>
+						<option value="10">Экран (дюймы/разрешение/Гц)</option>
+						<option value="11">Вес (кг)</option>
+						<option value="12">Батарея (Вт⋅ч)</option>
+						<option value="13">Цена</option>
+						<option value="14">Балл производительности</option>
+						<option value="15">Год</option>
           </select>
         </label>
 				<label> 
 					По убыванию?
-					<input type="checkbox" name="quest_2" value="2_1"></label>
+					<input type="checkbox" id="yes_or_no_3" name="quest_2" value="2_1"></label>
 				</p>
-				<p><input type="button" value="Сортировать"></p>
+				<p><input type="button" id="sort" value="Сортировать"></p>
 			</details>
 		</div>
 		<div class="table">
